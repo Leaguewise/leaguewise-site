@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light dark">
+    <title>Leaguewise</title>
+    <style>
+        :root {
+            color-scheme: light dark;
+            --bg: #f4f7f6;
+            --surface: #ffffff;
+            --border: #d5dbe3;
+            --text: #1d2430;
+            --accent: #007bff;
+            --brand-mark: #cdab58;
+            --brand-mark-dot: #efe9dc;
+            --brand-tile: #101112;
+            --brand-tile-edge: #5c6169;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg: #0e131c;
+                --surface: #161c28;
+                --border: #2b3441;
+                --text: #e8edf5;
+                --accent: #4d9bff;
+            }
+        }
+
+        * { box-sizing: border-box; }
+
+        html, body { height: 100%; }
+
+        body {
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 28px;
+            padding: 24px 16px;
+            background: var(--bg);
+            color: var(--text);
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+        }
+
+        h1 {
+            margin: 0;
+            display: flex;
+            align-items: baseline;
+            font-family: Rockwell, 'Rockwell Nova', Georgia, 'Times New Roman', serif;
+            font-size: 40px;
+            font-weight: 700;
+            line-height: 1;
+            letter-spacing: -0.01em;
+        }
+
+        .mark {
+            height: calc(0.74em * 20.3 / 15.5);
+            width: auto;
+            margin: -0.1146em 1px;
+            position: relative;
+            top: 0.1146em;
+            flex: 0 0 auto;
+        }
+
+        .stores {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            width: 100%;
+            max-width: 280px;
+        }
+
+        .stores a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 48px;
+            padding: 0 20px;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            background: var(--surface);
+            color: var(--text);
+            font-size: 16px;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .stores a:hover,
+        .stores a:focus-visible {
+            border-color: var(--accent);
+            outline: none;
+        }
+
+        @media (min-width: 700px) {
+            h1 { font-size: 56px; }
+            .stores { flex-direction: row; max-width: 460px; }
+            .stores a { flex: 1 1 0; }
+        }
+    </style>
+</head>
+
+<body>
+    <h1 aria-label="Leaguewise"><span>League</span><svg class="mark" viewBox="-1 1.2 26.8 20.3" aria-hidden="true"><rect x="-0.75" y="1.45" width="26.3" height="19.8" rx="4.2" fill="var(--brand-tile)" stroke="var(--brand-tile-edge)" stroke-width="0.5"/><polyline points="3,8 8,17.5 12,10.5 16,17.5 21,6" fill="none" stroke="var(--brand-mark)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="21" cy="6" r="2.4" fill="var(--brand-mark-dot)"/></svg><span>ise</span></h1>
+    <nav class="stores">
+        <a href="https://addons.mozilla.org/en-US/firefox/addon/leaguewise/">Add to Firefox</a>
+        <a href="https://chromewebstore.google.com/detail/leaguewise/emnepcdlpnnphjgfiajhkciijciifdoj">Add to Chrome</a>
+    </nav>
+</body>
+
+</html>
